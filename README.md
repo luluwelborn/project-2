@@ -1,5 +1,21 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Building Your First Full-stack Application
 
+#### Links for Instructors
+heroku: https://punny-app.herokuapp.com/
+github: https://github.com/luluwelborn/project-2
+
+#### Proposal
+Punny! Jokes to help alienate yourself.
+(this title will probably change)
+
+A random joke question will be pulled from the 3rd party database, then the user will hit a button for the punchline to appear. The punchline will populate with a 'save joke to list' button and a 'load new joke' button. There will be a list page for the user's saved jokes, and a list page for 'Punny's favorites' jokes.
+
+#### Captain's log
+07.27.17
+I really wanted to make an app to store my scores from different pinball games, and see the game's nation-wide high scores from a 3rd party database but I couldn't find a reliable source, so we're going with puns! I never remember jokes but I laugh at every pun-based joke I hear so I suppose this app is useful for people like me who are low on short-term memory storage.
+
+---
+
 #### Overview
 
 This second project is your first foray into **building a full-stack application.** You'll be **building a Node app,** which means you'll learn about what it takes to build a functional application from the ground up yourself.
