@@ -3,16 +3,17 @@
 #### Links for Instructors
 heroku: https://punny-app.herokuapp.com/
 github: https://github.com/luluwelborn/project-2
+trello: https://trello.com/b/2knuIDHX/project2
 
 #### Proposal
 Punny! Jokes to help alienate yourself.
 (this title will probably change)
 
-A random joke question will be pulled from the 3rd party database, then the user will hit a button for the punchline to appear. The punchline will populate with a 'save joke to list' button and a 'load new joke' button. There will be a list page for the user's saved jokes, and a list page for 'Punny's favorites' jokes.
+On the main app page, a random dad-joke will be pulled on every refresh from a database that I've created. That page will also have a 'get new joke' button that will populate a different random joke on the page. There will also be a page with a list of jokes pulled from a 3rd party API, so the user can browse multiple jokes at one time.
 
 #### Captain's log
 07.27.17
-I really wanted to make an app to store my scores from different pinball games, and see the game's nation-wide high scores from a 3rd party database but I couldn't find a reliable source, so we're going with puns! I never remember jokes but I laugh at every pun-based joke I hear so I suppose this app is useful for people like me who are low on short-term memory storage.
+I really wanted to make an app to store my scores from different pinball games, and see the game's nation-wide high scores from a 3rd party database but I couldn't find a reliable source, so we're going with puns aka dad-jokes! I never remember jokes but I laugh at every pun-based joke I hear so I suppose this app is useful for people like me who are low on short-term memory storage.
 
 ---
 
