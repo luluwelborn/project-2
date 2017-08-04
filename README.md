@@ -4,6 +4,7 @@
 heroku: https://punny-app.herokuapp.com/
 github: https://github.com/luluwelborn/project-2
 trello: https://trello.com/b/2knuIDHX/project2
+wireframe: https://github.com/luluwelborn/project-2/blob/master/public/images/wireframes.jpg
 
 #### Proposal
 Punny! Jokes to help alienate yourself.
