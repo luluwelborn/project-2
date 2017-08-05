@@ -1,1 +1,0 @@
-// myjokes.js
