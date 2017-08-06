@@ -36,4 +36,72 @@ require('./config/passport')(passport);
 var routes = require('./config/routes');
 app.use(routes);
 
-app.listen(3000);
+
+// --- MY JOKES SCHEMA OBJECTS ---
+var myJokes = [
+    {
+    	_id: 1,
+   		joke: 'What did the english book say to the math book? You got a lot of problems.',
+    },
+    {
+    	_id: 2,
+    	joke: 'Doctor youve got you help me, Im addicted to twitter. Doctor: I dont follow you.',
+    },
+    {
+    	_id: 3,
+    	joke: 'I tried taking some high resolution photos of local farmland, but they all turned out a bit grainy.',
+    },
+    {
+    	_id: 4,
+    	joke: 'Two satellites decided to get married. The wedding wasnt much, but the reception was incredible.',
+    },
+    {
+    	_id: 5,
+    	joke: 'If two vegans are having an argument, is it still considered beef?',
+    },
+    {
+    	_id: 6,
+    	joke: 'Is the pool safe for diving? It deep ends.',
+    },
+    {
+    	_id: 7,
+    	joke: 'Why do mathematicians hate the U.S.? Because its indivisible.',
+    },
+    {
+    	_id: 8,
+    	joke: 'Shout out to my grandma, thats the only way she can hear.',
+    },
+    {
+    	_id: 9,
+    	joke: 'Whats the difference between a guitar and a fish? You can tune a guitar but you cant "tuna" fish!',
+    },
+    {
+    	_id: 10,
+    	joke: 'My wife told me to rub the herbs on the meat for better flavor. Thats sage advice.',
+    },
+    
+]
+
+// --- ROUTES ---
+
+// HTML endpoints
+app.get('/', function homePage(req, res) {
+  res.sendFile(__dirname + '/views/index.ejs');
+});
+
+app.get('/', function moreJokesPage(req, res) {
+  res.sendFile(__dirname + '/views/more-jokes.ejs');
+});
+
+// JSON API endpoints
+
+
+
+// --- SERVER ---
+app.listen(process.env.PORT || 3000, function () {
+  console.log('Express server is Running!');
+});
+
+
+
+

@@ -14,7 +14,7 @@ On the main app page, a random dad-joke will be pulled on every refresh from a d
 
 #### Captain's log
 08.05.17
-Getting started is one of the hardest parts. I've read through some of the mocha/chai lessons, and it seems very complicated. I've also spent a lot of time trying to get an ejs file show up and it's become tough. I'll try using a different GET method.
+Getting started is one of the hardest parts(I hope). I've read through some of the mocha/chai lessons, and it seems very complicated. I've also spent a lot of time trying to get an ejs file show up and it's become tough. I'll try using a different GET method.
 
 07.27.17
 I really wanted to make an app to store my scores from different pinball games, and see the game's nation-wide high scores from a 3rd party database but I couldn't find a reliable source, so we're going with puns aka dad-jokes! I never remember jokes but I laugh at every pun-based joke I hear so I suppose this app is useful for people like me who are low on short-term memory storage.
