@@ -82,6 +82,18 @@ var jokes = [
     
 ]
 
+
+// HTML User-side : render jokes
+function renderJoke(joke)   {
+  console.log("hello, render joke");
+  var jokeHtml =
+    "<div class='jokes'" + album._id + "'>";
+  // render jokesHtml to index.ejs
+  $('#jokes').append(jokesHtml);
+};
+
+
+
 // --- ROUTES ---
 
 // HTML endpoints
