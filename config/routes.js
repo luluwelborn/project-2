@@ -16,6 +16,8 @@ var passport = require("passport");
 var usersController = require('../controllers/users');
 var staticsController = require('../controllers/statics');
 
+
+//  --- SIGNUP LOGIN --- 
 router.route('/')
   .get(staticsController.home);
 
@@ -33,4 +35,18 @@ router.route("/logout")
 router.route("/secret")
 	.get(authenticatedUser, usersController.secret)
 
+
+//  --- MORE JOKES --- 
+router.route('/more-jokes')
+  .get(authenticatedUser, usersController.secret)
+
+
+
 module.exports = router
+
+
+
+
+
+
+
