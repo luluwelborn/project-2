@@ -17,3 +17,5 @@ User.methods.validPassword = function(password) {
 };
 
 module.exports = mongoose.model('User', User);
+
+mongoose.connect( process.env.MONGODB_URI || 3000 );
