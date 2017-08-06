@@ -8,7 +8,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
 
-mongoose.connect('mongodb://localhost/local-authentication-with-passport'); 
+mongoose.connect('mongodb://localhost/punny-app'); 
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -38,7 +38,7 @@ app.use(routes);
 
 
 // --- MY JOKES SCHEMA OBJECTS ---
-var myJokes = [
+var jokes = [
     {
     	_id: 1,
    		joke: 'What did the english book say to the math book? You got a lot of problems.',
@@ -90,10 +90,16 @@ app.get('/', function homePage(req, res) {
 });
 
 app.get('/', function moreJokesPage(req, res) {
-  res.sendFile(__dirname + '/views/more-jokes.ejs');
+  res.sendFile('/views/more-jokes.ejs');
 });
 
 // JSON API endpoints
+
+// my jokes api
+// app.get('/', function jokes(req, res) {
+//     console.log('getting jokes', req.params);
+//     res.json(jokes);
+// });
 
 
 
@@ -101,6 +107,12 @@ app.get('/', function moreJokesPage(req, res) {
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is Running!');
 });
+
+
+
+
+
+
 
 
 

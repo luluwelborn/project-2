@@ -16,6 +16,8 @@ On the main app page, a random dad-joke will be pulled on every refresh from a d
 08.05.17
 Getting started is one of the hardest parts(I hope). I've read through some of the mocha/chai lessons, and it seems very complicated. I've also spent a lot of time trying to get an ejs file show up and it's become tough. I'll try using a different GET method.
 
+I also spent a long time trouble-shooting heroku. After getting a "No app specified" message I added 3 projects, an additional node_modules folder, and had to go back 3 commits to undo the damage. Now I'm trying to get hardcoded api items to show up without crashing the server. All that being said, I'm not feeling too bad!
+
 07.27.17
 I really wanted to make an app to store my scores from different pinball games, and see the game's nation-wide high scores from a 3rd party database but I couldn't find a reliable source, so we're going with puns aka dad-jokes! I never remember jokes but I laugh at every pun-based joke I hear so I suppose this app is useful for people like me who are low on short-term memory storage.
 
