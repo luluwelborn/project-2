@@ -3,3 +3,6 @@ mongoose.connect( process.env.MONGODB_URI ||
 				  process.env.MONGOHQ_URL ||
 				  "mongodb://localhost/punny-app" );
 
+var mongoose = require("mongoose");
+
+module.exports.jokes = require('user.js');
