@@ -87,7 +87,7 @@ var jokes = [
 function renderJoke(joke)   {
   console.log("hello, render joke");
   var jokeHtml =
-    "<div class='jokes'" + album._id + "'>";
+    "<div class='jokes'>";
   // render jokesHtml to index.ejs
   $('#jokes').append(jokesHtml);
 };
