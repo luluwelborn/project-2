@@ -92,6 +92,7 @@ function renderJoke(joke)   {
   $('#jokes').append(jokesHtml);
 };
 
+$('#albums').append(jokeHtml);
 
 
 // --- ROUTES ---
@@ -112,7 +113,6 @@ app.get('/punny-app', function jokes(req, res) {
     console.log('getting jokes', req.params);
     res.json(jokes);
 });
-
 
 
 // // --- SERVER ---
