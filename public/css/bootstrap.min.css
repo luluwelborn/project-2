@@ -23,6 +23,7 @@ main.container	{
 form {
 	max-width: 450px;
 	display: block;
+	padding-left: 50px;
 }
 
 footer {
