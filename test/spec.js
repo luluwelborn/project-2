@@ -1,14 +1,16 @@
 var expect = require('chai').expect;
 var request = require('request');
+// connect more-jokes.js file
+var moreJokes = require('../views/more-jokes');
 
-var URL = '';
+// var URL = '';
 
 
-// describe("joke", function() {
-//  describe("new", function() {
-//  	// callback
-//   it("initializes a new joke", function() {
-  
-//   });
-//  });
-// });
+describe('joke', function() {
+	it('it is a function', function () {
+        expect(moreJokes).to.be.a('function');
+    });
+    it("should have a name", function() {
+      expect(moreJokes).to.not.be.empty;
+    });
+});

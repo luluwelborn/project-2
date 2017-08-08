@@ -37,7 +37,7 @@ var routes = require('./config/routes');
 app.use(routes);
 
 
-// --- MY JOKES SCHEMA OBJECTS ---
+// --- MY JOKES ARRAY ---
 var jokes = [
     {
     	_id: 1,
@@ -88,6 +88,7 @@ var jokes = [
 // });
 
 // HTML User-side : render jokes
+// option 1
 function renderJoke(joke)   {
   console.log("hello, render joke");
   var jokeHtml =
@@ -95,6 +96,11 @@ function renderJoke(joke)   {
   // render jokesHtml to index.ejs
   $('#jokes').append(jokesHtml);
 };
+
+// option 2 - from other random quote site
+// $.getJSON("https://", function(a) {
+//   $("body").append(a[0].content)
+// });
 
 
 // --- ROUTES ---
@@ -110,18 +116,35 @@ app.get('/', function moreJokesPage(req, res) {
 
 // JSON API endpoints
 
-// my jokes api
-// GET
+// GET from my jokes api
 app.get('/punny-app', function jokes(req, res) {
     console.log('getting jokes', req.params);
     res.json(jokes);
 });
 
-// POST
+// GET from reddit api
 
-// PUSH
+
+// Users joke page
+// GET
+// app.get('', function(req,res) {
+//     console.log('get joke route');
+//      res.json(jokes);
+// });
+
+// POST - add joke to page
+// app.post('', function(req, res){
+//     console.log('post joke route');
+//      jokes.push(req.body);
+//      res.json(jokes);
+// });
 
 // DELETE
+// app.delete('', function(req,res) {
+//     console.log('delete joke from list route');
+//     jokes.splice(req.params.id-1,1);
+//     res.json(jokes);
+// });
 
 // // --- SERVER ---
 app.listen(process.env.PORT || 3000, function () {
