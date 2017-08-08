@@ -1,7 +1,7 @@
 mongoose.connect( process.env.MONGODB_URI ||
 				  process.env.MONGOLAB_URI || 
 				  process.env.MONGOHQ_URL ||
-				  "mongodb://localhost/punny-app" );
+				  "mongodb://localhost:3000" );
 
 var mongoose = require("mongoose");
 
