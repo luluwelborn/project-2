@@ -12,7 +12,21 @@ Punny! Jokes to help alienate yourself.
 
 On the main app page, a random dad-joke will be pulled on every refresh from a database that I've created. That page will also have a 'get new joke' button that will populate a different random joke on the page. There will also be a page with a list of jokes pulled from a 3rd party API, so the user can browse multiple jokes at one time.
 
+#### WHAT INSTRUCTORS WANT TO KNOW
+Tech Used - tesing with mocha/chai, node.js, mongo, bootstrap, express server, & js/jQuery.
+
+Approach - It was my intention to build the project in this order:
+Authentication, heroku setup, routes from personal api, routes from 3rd party api, tests, css.
+
+Installation Instructions - currently the only instructions for users on the front-end are to sign in or login and read the hardcoded joke, or link to the subreddit I planned on pulling the api from.
+
+Unsolved Problems - Need to get heroku correctly connectd, routes working and tests passing. I know way more about heroku errors then I could have imagined.
+
 #### Captain's log
+08.07.17
+It's the night before the project is due, and it's also the day before my 34th birthday! (I'm getting too old for this shit).
+I spent the weekend working with passport and heroku, as well as creating my main page's joke schema and array. Today I started some tests, routes, css and made sure things are commented. Now it's time to get some sleep.
+
 08.05.17
 Getting started is one of the hardest parts(I hope). I've read through some of the mocha/chai lessons, and it seems very complicated. I've also spent a lot of time trying to get an ejs file show up and it's become tough. I'll try using a different GET method.
 

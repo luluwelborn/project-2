@@ -9,6 +9,7 @@ var User = mongoose.Schema({
   }
 });
 
+// My jokes array schema
 var jokesSchema = new Schema({
     joke: String,
 });
