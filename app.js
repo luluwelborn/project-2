@@ -82,6 +82,10 @@ var jokes = [
     
 ]
 
+// $(document).ready(function() {
+//   console.log('app.js loaded!');
+//   renderJoke(jokes[0]);
+// });
 
 // HTML User-side : render jokes
 function renderJoke(joke)   {
@@ -91,8 +95,6 @@ function renderJoke(joke)   {
   // render jokesHtml to index.ejs
   $('#jokes').append(jokesHtml);
 };
-
-$('#albums').append(jokeHtml);
 
 
 // --- ROUTES ---
@@ -109,11 +111,17 @@ app.get('/', function moreJokesPage(req, res) {
 // JSON API endpoints
 
 // my jokes api
+// GET
 app.get('/punny-app', function jokes(req, res) {
     console.log('getting jokes', req.params);
     res.json(jokes);
 });
 
+// POST
+
+// PUSH
+
+// DELETE
 
 // // --- SERVER ---
 app.listen(process.env.PORT || 3000, function () {
