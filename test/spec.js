@@ -1,16 +1,12 @@
-var expect = require('chai').expect;
-var request = require('request');
-// connect more-jokes.js file
-var moreJokes = require('../views/more-jokes');
+var joke = require("../models/joke");
+var listJoke = require("../models/joke");
+var expect = require("chai").expect;
 
-// var URL = '';
-
-
-describe('joke', function() {
-	it('it is a function', function () {
-        expect(moreJokes).to.be.a('function');
+describe('Testing joke', function () {
+    it('should exist', function () {
+        expect(joke).to.be.a('function');
     });
-    it("should have a name", function() {
-      expect(moreJokes).to.not.be.empty;
+    it("should exist", function() {
+      expect(joke).to.be.a('function');
     });
 });
