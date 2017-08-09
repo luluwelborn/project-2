@@ -1,7 +1,7 @@
 {
   "name": "punny",
   "version": "0.0.1",
-  "description": "WDI lab about implementing passport with mongoose and express",
+  "description": "project 2",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

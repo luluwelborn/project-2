@@ -7,6 +7,6 @@ describe('Testing joke', function () {
         expect(joke).to.be.a('function');
     });
     it("should exist", function() {
-      expect(joke).to.be.a('function');
+      expect(listJoke).to.be.a('function');
     });
 });
