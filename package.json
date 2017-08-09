@@ -1,21 +1,18 @@
 {
-  "name": "my-punny-app",
+  "name": "punny",
   "version": "0.0.1",
-  "description": "Project 2 app",
+  "description": "WDI lab about implementing passport with mongoose and express",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SF-WDI-LABS/express_self_api.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "bcrypt-nodejs": "latest",
-    "body-parser": "~1.0.0",
-    "bootstrap": "^3.3.7",
+    "body-parser": "^1.17.2",
     "bower": "^1.8.0",
+    "chai": "^4.1.1",
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.0.0",
     "ejs": "~0.8.5",
@@ -23,14 +20,14 @@
     "express-ejs-layouts": "^1.1.0",
     "express-session": "~1.0.0",
     "hbs": "^4.0.0",
-    "method-override": "~1.0.0",
-    "mongod": "^2.0.0",
-    "mongoose": "^4.7.2",
+    "method-override": "^1.0.2",
+    "mocha": "^3.5.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.11.6",
     "morgan": "~1.0.0",
     "node": "^8.2.1",
-    "node.js": "0.0.0",
     "nodemon": "^1.11.0",
-    "passport": "~0.1.17",
+    "passport": "^0.1.18",
     "passport-facebook": "~1.0.2",
     "passport-google-oauth": "~0.1.5",
     "passport-local": "^0.1.6",
@@ -38,8 +35,16 @@
   },
   "author": "gerry Mathe",
   "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.1.1",
-    "mocha": "^3.5.0"
-  }
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luluwelborn/project-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luluwelborn/project-2/issues"
+  },
+  "homepage": "https://github.com/luluwelborn/project-2#readme"
 }
