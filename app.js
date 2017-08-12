@@ -85,55 +85,24 @@ var jokes = [
     
 ]
 
-// $(document).ready(function() {
-//   console.log('app.js loaded!');
-//   renderJoke(jokes[0]);
-// });
-
-// HTML User-side : render jokes
-// option 1
-function renderJoke(joke)   {
-  console.log("hello, render joke");
-  var jokeHtml =
-    "<div class='jokes'>";
-  // render jokesHtml to index.ejs
-  $('#jokes').append(jokesHtml);
-};
-
-// option 2 - from other random quote site
-// $.getJSON("https://", function(a) {
-//   $("body").append(a[0].content)
-// });
-
 
 // --- ROUTES ---
 
 // HTML endpoints
 app.get('/', function homePage(req, res) {
-  res.sendFile(__dirname + '/views/index.ejs');
+    console.log('get jokes');
+  res.json(jokes);
 });
 
-app.get('/', function moreJokesPage(req, res) {
-  res.sendFile('/views/more-jokes.ejs');
-});
-
-// JSON API endpoints
-
-// GET from my jokes api
-app.get('/punny-app', function jokes(req, res) {
-    console.log('getting jokes', req.params);
-    res.json(jokes);
-});
-
-// GET from reddit api
-
-
-// Users joke page
-// GET
-// app.get('', function(req,res) {
-//     console.log('get joke route');
-//      res.json(jokes);
+// app.get('/', function moreJokesPage(req, res) {
+//   res.sendFile('/views/more-jokes.ejs');
 // });
+
+// GET from reddit api / user's joke page
+app.get('/moreJokes', function(req,res) {
+    console.log('get joke route');
+    res.render("moreJokes");
+});
 
 // POST - add joke to page
 // app.post('', function(req, res){
