@@ -4,9 +4,11 @@ $(document).ready(function() {
     // ------ get data types on page from server ------ //
     $.ajax({
         method: 'GET',
-        url: '/user',
+        url: '/moreJokes',
         success: function(result) {
             console.log("get jokes function running");
         }
     })
 });
+
+$('#moreJokes').append(jokesHtml);
