@@ -1,7 +1,7 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Building Your First Full-stack Application
 
 #### Links for Instructors
-heroku: https://punny-app.herokuapp.com/
+heroku: https://ancient-lake-42388.herokuapp.com/
 github: https://github.com/luluwelborn/project-2
 trello: https://trello.com/b/2knuIDHX/project2
 wireframe: https://github.com/luluwelborn/project-2/blob/master/public/images/wireframes.jpg
