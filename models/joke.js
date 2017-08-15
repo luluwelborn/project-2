@@ -2,6 +2,7 @@ function joke() {
 	console.log('created joke function');
 }
 
+// --- links nav to moreJokes.ejs
 function moreJokes(req, res, next) {
 	console.log('list joke function');
 	// request 3rd party url

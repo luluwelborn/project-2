@@ -1,3 +1,5 @@
+// --- MY MONSTEROUS SERVER ---
+
 var express      = require('express');
 var app          = express();
 var mongoose     = require('mongoose');
@@ -88,21 +90,24 @@ var jokes = [
 
 // --- ROUTES ---
 
-// HTML endpoints
-app.get('/', function homePage(req, res) {
-    console.log('get jokes');
-  res.json(jokes);
-});
+    // HOMEPAGE ROUTES
 
+// app.get('/', function homePage(req, res) {
+//     console.log('get jokes');
+//   res.json(jokes);
+// });
+
+
+    // MORE JOKES - REDDIT API PAGE
 // app.get('/', function moreJokesPage(req, res) {
 //   res.sendFile('/views/more-jokes.ejs');
 // });
 
-// GET from reddit api / user's joke page
-app.get('/moreJokes', function(req,res) {
-    console.log('get joke route');
-    res.render("moreJokes");
-});
+// GET
+// app.get('/moreJokes', function(req,res) {
+//     console.log('get joke route');
+//     res.render("moreJokes");
+// });
 
 // POST - add joke to page
 // app.post('', function(req, res){
@@ -118,7 +123,9 @@ app.get('/moreJokes', function(req,res) {
 //     res.json(jokes);
 // });
 
-// // --- SERVER ---
+
+
+// --- SERVER ---
 app.listen(process.env.PORT || 3000, function () {
   console.log('Server is Running!');
 });
