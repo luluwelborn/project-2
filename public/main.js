@@ -1,14 +1,16 @@
 // ------ Front end js ------
 $(document).ready(function() {
-    console.log( "ready!" );
+    // console.log( "ready!" );
     // ------ get data types on page from server ------ //
     $.ajax({
         method: 'GET',
-        url: '/moreJokes',
+        url: '/jokes',
         success: function(result) {
             console.log("get jokes function running");
+            //get the result
+            //append somehow onto the dom? $('#moreJokes').append(jokesHtml);
+
         }
     })
 });
 
-$('#moreJokes').append(jokesHtml);

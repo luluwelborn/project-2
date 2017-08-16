@@ -9,12 +9,7 @@ var User = mongoose.Schema({
   }
 });
 
-// My jokes array schema
-var jokesSchema = new Schema({
-    joke: String,
-});
 
-var jokes = mongoose.model('jokes', jokesSchema);
 
 
 User.methods.hash = function(password) {
