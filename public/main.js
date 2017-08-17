@@ -20,21 +20,30 @@ $(document).ready(function() {
 	successNewJoke();
 });
 
-// display one random joke - 
+// display one random joke
 // look into js random # random # between 0 and last item
 // put random number into[]
-
-// display jokes on page
-function displayJokes(jokesPassedIn) {
-	var sentenceHTML = "";
-
-	jokesPassedIn.forEach(function(joke) {
-		// take array and return string
-		sentenceHTML = sentenceHTML + '<p>' + joke.sentence + '</p>';
+function displayJokes(randomPassedIn) {
+	var oneSentenceHTML = "";
+	randomPassedIn.forEach(function(jokes) {
+		oneSentenceHTML = oneSentenceHTML + jokes.sentence[Math.floor(Math.random()*jokes.length)];
 	});
+	$('#sentence').append(oneSentenceHTML);
+	console.log(displayJokes(jokes.length));
+};
 
-	$('#sentence').append(sentenceHTML);
-	//append somehow onto the dom
-}
+
+// display all jokes on page
+// function displayJokes(jokesPassedIn) {
+// 	var sentenceHTML = "";
+
+// 	jokesPassedIn.forEach(function(joke) {
+// 		// take array and return string
+// 		sentenceHTML = sentenceHTML + '<p>' + joke.sentence + '</p>';
+// 	});
+
+// 	$('#sentence').append(sentenceHTML);
+// 	//append somehow onto the dom
+// }
 
 
