@@ -35,7 +35,7 @@ main.container	{
 /*	padding-top: 30px;*/
 	padding-bottom: 20px;
 	text-align: center;
-	max-width: 650px;
+	max-width: 450px;
 	display: block;
 	line-height: 30px;
 }
@@ -49,6 +49,10 @@ form {
 	/*padding-left: 50px;*/
 	padding-bottom: 20px;
 	text-align: center;
+}
+
+p {
+	font-size: 21px;
 }
 
 /* bootstrap's default class name for the btn */

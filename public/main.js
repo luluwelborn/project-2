@@ -1,5 +1,6 @@
 // ------ FRONT END JS ------
 
+// --- Homepage ---
 $(document).ready(function() {
     // console.log( "ready!" );
     // ------ get data types on page from server ------ //
@@ -21,42 +22,49 @@ $(document).ready(function() {
 });
 
 // display one random joke
-// look into js random # random # between 0 and last item
-// put random number into[]
-// PUTS ONE RANDOM LETTER ON MULTIPLE LINES
 function displayJokes(jokesPassedIn) {
 	var sentenceHTML = "";
-	// jokesPassedIn.forEach(function(joke) {
 		let rando = Math.floor(Math.random()*jokesPassedIn.length);
 	sentenceHTML = '<p>' + jokesPassedIn[rando].sentence + '</p>';
-	// });
 	// we want 1 joke out of array 
 
 	$('#sentence').append(sentenceHTML);
 	console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
 };
 
-// TRY 2
-// function displayJokes(jokes) {
-// 	var jokes = Math.floor(Math.random()*jokes.length);
-// 	for(var i = 0; i <= jokes.length; i++) {
-// 		if(jokes[i] === number) {
-// 		console.log(jokes, jokes[i]);
-// 		};
-// 	};
-// };
 
 
-// display all jokes on page
-// function displayJokes(jokesPassedIn) {
-// 	var sentenceHTML = "";
+// --- More Jokes ---
+// $(document).ready(function() {
+//     // console.log( "ready!" );
+//     // ------ get data types on page from server ------ //
+//     function successList() {
+//     	// console.log("is this running?");
+// 	    $.ajax({
+// 	        method: 'GET',
+// 	        url: '/moreJokes',
+// 	        success: function(list) {
+// 	        	// console.log(list);
+// 	        	displayJokes(list);
+// 	        },
+// 	        error: function(error) {
+// 	        	console.log(error);
+// 	        }
+// 	    })
+// 	}
+// 	successList();
+// });
+
+// // display all jokes on page
+// function displayMoreJokes(listPassedIn) {
+// 	var moreJokesHTML = "";
 
 // 	jokesPassedIn.forEach(function(joke) {
 // 		// take array and return string
-// 		sentenceHTML = sentenceHTML + '<p>' + joke.sentence + '</p>';
+// 		moreJokesHTML = moreJokesHTML + '<p>' + joke.moreJokes + '</p>';
 // 	});
 
-// 	$('#sentence').append(sentenceHTML);
+// 	$('#moreJokes').append(sentenceHTML);
 // 	//append somehow onto the dom
 // }
 

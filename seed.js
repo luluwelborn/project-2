@@ -34,6 +34,7 @@ var jokes = [
     },
 ]
 
+// homepage jokes
 db.Joke.create(jokes, function(err, jokes)  {
     if (err) {
         console.log(err);
@@ -42,3 +43,6 @@ db.Joke.create(jokes, function(err, jokes)  {
         console.log("you have data!");
     }
 })
+
+
+

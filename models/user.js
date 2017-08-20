@@ -10,8 +10,6 @@ var User = mongoose.Schema({
 });
 
 
-
-
 User.methods.hash = function(password) {
 	return bcrypt.hashSync(password, bcrypt.genSaltSync(8));
 };

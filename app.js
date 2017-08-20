@@ -62,9 +62,9 @@ app.get('/jokes', function homePage(req, res) {
 
 
     // MORE JOKES - REDDIT API PAGE
-// app.get('/', function moreJokesPage(req, res) {
-//   res.sendFile('/views/more-jokes.ejs');
-// });
+app.get('/', function moreJokesPage(req, res) {
+  res.sendFile('/views/moreJokes.ejs');
+});
 
 // GET
 // app.get('/moreJokes', function(req,res) {

@@ -1,5 +1,5 @@
 var joke = require("../models/joke");
-var listJoke = require("../models/joke");
+var listJoke = require("../models/listJoke");
 var expect = require("chai").expect;
 const request = require("request");
 
