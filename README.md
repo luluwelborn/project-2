@@ -23,6 +23,10 @@ Installation Instructions - currently the only instructions for users on the fro
 Unsolved Problems - Need to get heroku correctly connectd, routes working and tests passing. I know way more about heroku errors then I could have imagined.
 
 #### Captain's log
+08.23.17
+What a wild ride it's been. Heroku trouble shooting took the majority of time on this project. Today I am troubleshooting some linking to heroku issues. On the bright side I have a random joke aon the homepage and afew more tests, so progress has been made!
+
+
 08.07.17
 It's the night before the project is due, and it's also the day before my 34th birthday! (I'm getting too old for this shit).
 I spent the weekend working with passport and heroku, as well as creating my main page's joke schema and array. Today I started some tests, routes, css and made sure things are commented. Now it's time to get some sleep.
