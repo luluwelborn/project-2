@@ -24,7 +24,8 @@ Unsolved Problems - Need to get heroku correctly connectd, routes working and te
 
 #### Captain's log
 08.23.17
-What a wild ride it's been. Heroku trouble shooting took the majority of time on this project. Today I am troubleshooting some linking to heroku issues. On the bright side I have a random joke aon the homepage and afew more tests, so progress has been made!!!
+What a wild ride it's been!
+Since the first submission I have connected my jokes to the front end, have routes to get a single, randomized joke on the main page, heroku works, I have 5 tests, many issues resolved, and a seed file  and joke model for more organized code!
 
 
 08.07.17
