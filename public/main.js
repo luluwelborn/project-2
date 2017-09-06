@@ -1,8 +1,9 @@
 // ------ FRONT END JS ------
-
 // --- Homepage ---
 $(document).ready(function() {
     // console.log( "ready!" );
+    //get an element via 
+    console.log(document.getElementById("userId").dataset.id);
     // ------ get data types on page from server ------ //
     function successNewJoke() {
     	// console.log("is this running?");
@@ -34,7 +35,7 @@ function displayJokes(jokesPassedIn) {
 
 
 
-// --- More Jokes ---
+// --- My Jokes ---
 // $(document).ready(function() {
 //     // console.log( "ready!" );
 //     // ------ get data types on page from server ------ //

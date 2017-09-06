@@ -62,14 +62,14 @@ app.get('/jokes', function homePage(req, res) {
 
 
     // MORE JOKES - REDDIT API PAGE
-app.get('/', function moreJokesPage(req, res) {
-  res.sendFile('/views/moreJokes.ejs');
-});
+// app.get('/', function moreJokesPage(req, res) {
+//   res.sendFile('/views/moreJokes.ejs');
+// });
 
 // GET
-// app.get('/moreJokes', function(req,res) {
+// app.get('/myJokes', function(req,res) {
 //     console.log('get joke route');
-//     res.render("moreJokes");
+//     res.render("myJokes");
 // });
 
 // POST - add joke to page

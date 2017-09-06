@@ -36,8 +36,8 @@ router.route("/secret")
 	.get(authenticatedUser, usersController.secret)
 
 
-//  --- MORE JOKES --- 
-router.route('/more-jokes')
+//  --- MY JOKES --- 
+router.route('/myJokes')
   .get(authenticatedUser, usersController.secret)
 
 
