@@ -2,11 +2,16 @@
 // --- Homepage ---
 $(document).ready(function() {
     // console.log( "ready!" );
-    //get an element via 
-    console.log(document.getElementById("userId").dataset.id);
+    // ------ get data types on user page from server ------ //
+    // console.log(document.getElementById("userId").dataset.id);
+    // function successUserJoke() {
+    // 	document.getElementById('userId').dataset.id;
+    // 	console.log(successUserJoke);
+    // };
+    // successUserJoke();
+
     // ------ get data types on page from server ------ //
     function successNewJoke() {
-    	// console.log("is this running?");
 	    $.ajax({
 	        method: 'GET',
 	        url: '/jokes',
@@ -32,6 +37,17 @@ function displayJokes(jokesPassedIn) {
 	$('#sentence').append(sentenceHTML);
 	console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
 };
+
+//  display joke onto user page
+// function userJokes(userPassedIn) {
+// 	var listJoke = "";
+// 		let listId = userPassedIn.id;
+// 	listJoke = '<p>' + userPassedIn[listId].sentance + '</p>';
+// 	// we want 1 joke out of array 
+
+// 	$('#sentence').append(sentenceHTML);
+// 	console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
+// };
 
 
 
