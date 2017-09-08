@@ -35,19 +35,14 @@ function displayJokes(jokesPassedIn) {
 	// we want 1 joke out of array 
 
 	$('#sentence').append(sentenceHTML);
-	console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
+	// console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
+	console.log(jokesPassedIn[rando].sentence);
 };
 
 //  display joke onto user page
-// function userJokes(userPassedIn) {
-// 	var listJoke = "";
-// 		let listId = userPassedIn.id;
-// 	listJoke = '<p>' + userPassedIn[listId].sentance + '</p>';
-// 	// we want 1 joke out of array 
-
-// 	$('#sentence').append(sentenceHTML);
-// 	console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
-// };
+app.get('/myJokes', function(req,res) {
+	
+});
 
 
 
