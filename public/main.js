@@ -31,18 +31,19 @@ $(document).ready(function() {
 function displayJokes(jokesPassedIn) {
 	var sentenceHTML = "";
 		let rando = Math.floor(Math.random()*jokesPassedIn.length);
-	sentenceHTML = '<p>' + jokesPassedIn[rando].sentence + '</p>';
+	sentenceHTML = '<p id="favJoke">' + jokesPassedIn[rando].sentence + '</p>';
 	// we want 1 joke out of array 
 
 	$('#sentence').append(sentenceHTML);
 	// console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
-	console.log(jokesPassedIn[rando].sentence);
+
 };
 
-//  display joke onto user page
-app.get('/myJokes', function(req,res) {
-	
-});
+function saveJoke() {
+
+};
+
+
 
 
 
