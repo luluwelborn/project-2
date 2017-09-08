@@ -32,16 +32,19 @@ function displayJokes(jokesPassedIn) {
 	var sentenceHTML = "";
 		let rando = Math.floor(Math.random()*jokesPassedIn.length);
 	sentenceHTML = '<p id="favJoke">' + jokesPassedIn[rando].sentence + '</p>';
-	// we want 1 joke out of array 
 
 	$('#sentence').append(sentenceHTML);
 	// console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
 
 };
 
-function saveJoke() {
 
-};
+// function saveJoke() {
+	
+// 	document.getElementById(favJoke);
+// 	res.send("joke saved to database");
+// 	console.log("favJoke");
+// };
 
 
 

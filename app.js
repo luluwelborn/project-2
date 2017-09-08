@@ -59,11 +59,7 @@ app.get('/jokes', function homePage(req, res) {
     });
 });
 
-//  get jokes to back end
-app.get('/myJokes', function(req,res) {
-  // console.log("sending to back");
-  res.send(jokesPassedIn[rando].sentence, "sent");
-});
+
 
     // MORE JOKES - REDDIT API PAGE
 // app.get('/', function moreJokesPage(req, res) {
