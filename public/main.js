@@ -16,36 +16,42 @@ $(document).ready(function() {
 	        }
 	    })
 	}
+
+	// display one random joke
+	function displayJokes(jokesPassedIn) {
+		var sentenceHTML = "";
+			let rando = Math.floor(Math.random()*jokesPassedIn.length);
+		sentenceHTML = '<p id="favJoke">' + jokesPassedIn[rando].sentence + '</p>';
+
+		$('#sentence').append(sentenceHTML);
+		// console.log(jokesPassedIn[rando.sentence]);
+	};
+
+
+	$('#saveJoke').on('click', function(event) {
+		var favJoke = $('#favJoke').text();
+		console.log("you clicked");
+		console.log("fav joke:", favJoke);
+
+		$.ajax({
+			method: 'PUT',
+			url: '/favorites',
+			data: favJoke,
+			success: function(joke) {
+	        	console.log(joke);
+	        	// displayJokes(joke);
+	        },
+	        error: function(error) {
+	        	console.log(error);
+	        }
+		})
+
+		// res.send("joke saved to database");
+		console.log("need backend response");
+	});
 	successNewJoke();
 
 });
-
-// display one random joke
-function displayJokes(jokesPassedIn) {
-	var sentenceHTML = "";
-		let rando = Math.floor(Math.random()*jokesPassedIn.length);
-	sentenceHTML = '<p id="favJoke">' + jokesPassedIn[rando].sentence + '</p>';
-
-	$('#sentence').append(sentenceHTML);
-	// console.log(jokesPassedIn[rando.sentence]);
-
-};
-
-$('#saveJoke').on('click', saveJoke());
-
-function saveJoke() {
-	var favJoke = document.getElementById("favJoke");
-	console.log("hello favJoke");
-
-	$.ajax({
-		favorite: 'UPDATE',
-		url: '/jokes',
-	})
-
-	// res.send("joke saved to database");
-	console.log("need backend response");
-};
-
 
 
 

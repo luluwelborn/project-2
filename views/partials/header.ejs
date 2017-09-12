@@ -35,7 +35,6 @@
           <!-- <li><a href="/about">About Punny</a></li> -->
           <li><a href="/myJokes">My Jokes</a></li>
         <% if (currentUser) {%>
-
           <li><a id="userId" data-id=<%= currentUser._id %> href="/logout">Logout <%= currentUser.local.email %></a></li>
         <% } else { %>
           <li><a href="/login">Login</a></li>

@@ -32,8 +32,6 @@ app.use(passport.session());
 app.use(flash()); 
 
 require('./config/passport')(passport);
-
-require('./config/passport')(passport);
 	app.use(function (req, res, next) {
 	res.locals.currentUser = req.user;
 	next();
@@ -41,11 +39,6 @@ require('./config/passport')(passport);
 
 var routes = require('./config/routes');
 app.use(routes);
-
-
-
-
-// find jokes to return to page
 
 
 
@@ -59,11 +52,15 @@ app.get('/jokes', function homePage(req, res) {
     });
 });
 
-// POST - add user favorite joke to page
-app.post('', function(req, res){
+// add user favorite joke to page
+app.put('/favorites', function(req, res){
     console.log('post joke route');
-     jokes.push(req.body);
-     res.json(jokes);
+    // console.log(req);
+    db.Joke.update({_id: req.user._id},
+      // updating db
+    {$push: {favorites: req.body}}, function (err, user){
+      res.json(user);
+    });
 });
 
 // DELETE - delete user joke
