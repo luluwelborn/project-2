@@ -52,7 +52,7 @@ app.get('/jokes', function homePage(req, res) {
     });
 });
 
-// add user favorite joke to page
+// add user favorite joke to back
 app.put('/favorites', function(req, res){
     console.log('post joke route');
     // console.log(req);
@@ -61,6 +61,14 @@ app.put('/favorites', function(req, res){
     {$push: {favorites: req.body}}, function (err, user){
       res.json(user);
     });
+});
+
+// add favJoke to front
+app.get('/myJokes', function favJokeList(req, res){
+  console.log("hello backend to front!");
+  db.Joke._id({}, function(err, favJoke) {
+  res.json(favJoke);
+  });
 });
 
 // DELETE - delete user joke

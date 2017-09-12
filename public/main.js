@@ -47,25 +47,26 @@ $(document).ready(function() {
 		})
 
 		// res.send("joke saved to database");
-		console.log("need backend response");
+		// console.log("need backend response");
 	});
+
+	// // display all jokes on page
+	function displayMyJokes(favJoke) {
+		console.log("hello display my jokes");
+		var favJokes = "";
+		listPassedIn.forEach(function(favjoke) {
+			// take array and return string
+			favJoke = favJoke + '<li>' + joke.myJoke + '</li>';
+		});
+
+		$('#myJokes').append(favJoke);
+	}
+
 	successNewJoke();
 
 });
 
 
 
-// // display all jokes on page
-// function displayMoreJokes(listPassedIn) {
-// 	var moreJokesHTML = "";
-
-// 	jokesPassedIn.forEach(function(joke) {
-// 		// take array and return string
-// 		moreJokesHTML = moreJokesHTML + '<p>' + joke.moreJokes + '</p>';
-// 	});
-
-// 	$('#moreJokes').append(sentenceHTML);
-// 	//append somehow onto the dom
-// }
 
 
