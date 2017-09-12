@@ -2,11 +2,14 @@ var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 Schema = mongoose.Schema;
 
+Joke = require('./joke');
+
 var User = mongoose.Schema({
   local : {
     email        : String,
     password     : String,
-  }
+  },
+  favorites : [Joke.schema]
 });
 
 
@@ -19,3 +22,4 @@ User.methods.validPassword = function(password) {
 };
 
 module.exports = mongoose.model('User', User);
+

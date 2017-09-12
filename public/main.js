@@ -2,14 +2,6 @@
 // --- Homepage ---
 $(document).ready(function() {
     // console.log( "ready!" );
-    // ------ get data types on user page from server ------ //
-    // console.log(document.getElementById("userId").dataset.id);
-    // function successUserJoke() {
-    // 	document.getElementById('userId').dataset.id;
-    // 	console.log(successUserJoke);
-    // };
-    // successUserJoke();
-
     // ------ get data types on page from server ------ //
     function successNewJoke() {
 	    $.ajax({
@@ -25,6 +17,7 @@ $(document).ready(function() {
 	    })
 	}
 	successNewJoke();
+
 });
 
 // display one random joke
@@ -34,42 +27,27 @@ function displayJokes(jokesPassedIn) {
 	sentenceHTML = '<p id="favJoke">' + jokesPassedIn[rando].sentence + '</p>';
 
 	$('#sentence').append(sentenceHTML);
-	// console.log(jokesPassedIn[Math.floor(Math.random()*jokesPassedIn.length)]);
+	// console.log(jokesPassedIn[rando.sentence]);
 
 };
 
+$('#saveJoke').on('click', saveJoke());
 
-// function saveJoke() {
-	
-// 	document.getElementById(favJoke);
-// 	res.send("joke saved to database");
-// 	console.log("favJoke");
-// };
+function saveJoke() {
+	var favJoke = document.getElementById("favJoke");
+	console.log("hello favJoke");
+
+	$.ajax({
+		favorite: 'UPDATE',
+		url: '/jokes',
+	})
+
+	// res.send("joke saved to database");
+	console.log("need backend response");
+};
 
 
 
-
-
-// --- My Jokes ---
-// $(document).ready(function() {
-//     // console.log( "ready!" );
-//     // ------ get data types on page from server ------ //
-//     function successList() {
-//     	// console.log("is this running?");
-// 	    $.ajax({
-// 	        method: 'GET',
-// 	        url: '/moreJokes',
-// 	        success: function(list) {
-// 	        	// console.log(list);
-// 	        	displayJokes(list);
-// 	        },
-// 	        error: function(error) {
-// 	        	console.log(error);
-// 	        }
-// 	    })
-// 	}
-// 	successList();
-// });
 
 // // display all jokes on page
 // function displayMoreJokes(listPassedIn) {

@@ -59,31 +59,23 @@ app.get('/jokes', function homePage(req, res) {
     });
 });
 
+// POST - add user favorite joke to page
+app.post('', function(req, res){
+    console.log('post joke route');
+     jokes.push(req.body);
+     res.json(jokes);
+});
 
-
-    // MORE JOKES - REDDIT API PAGE
-// app.get('/', function moreJokesPage(req, res) {
-//   res.sendFile('/views/moreJokes.ejs');
-// });
-
-// GET
-// app.get('/myJokes', function(req,res) {
-//     console.log('get joke route');
-//     res.render("myJokes");
-// });
-
-// POST - add joke to page
-// app.post('', function(req, res){
-//     console.log('post joke route');
-//      jokes.push(req.body);
-//      res.json(jokes);
-// });
-
-// DELETE
+// DELETE - delete user joke
 // app.delete('', function(req,res) {
 //     console.log('delete joke from list route');
 //     jokes.splice(req.params.id-1,1);
 //     res.json(jokes);
+// });
+
+    // MORE JOKES - REDDIT API PAGE
+// app.get('/', function moreJokesPage(req, res) {
+//   res.sendFile('/views/moreJokes.ejs');
 // });
 
 

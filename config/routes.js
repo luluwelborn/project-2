@@ -36,10 +36,11 @@ router.route("/secret")
 	.get(authenticatedUser, usersController.secret)
 
 
-//  --- MY JOKES --- 
+//  --- MY JOKES ON FRONT --- 
 router.route('/myJokes')
   .get(authenticatedUser, usersController.secret)
 
+// --- POST ROUTE TO DATABSASE ---
 
 
 module.exports = router
