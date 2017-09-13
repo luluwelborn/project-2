@@ -50,19 +50,31 @@ $(document).ready(function() {
 		// console.log("need backend response");
 	});
 
-	// // display all jokes on page
+
+	// display all jokes on page
 	function displayMyJokes(favJoke) {
-		console.log("hello display my jokes");
+		$.ajax({
+	        method: 'GET',
+	        url: '/myJokes',
+	        success: function(favjoke) {
+	        	console.log("favJoke is : ", favJoke);
+	        	// displayJokes(favJoke);
+	        },
+	        error: function(error) {
+	        	console.log(error);
+	        }
+	    })
+
 		var favJokes = "";
-		listPassedIn.forEach(function(favjoke) {
-			// take array and return string
-			favJoke = favJoke + '<li>' + joke.myJoke + '</li>';
+		displayMyJokes.forEach(function(favJoke) {
+		favJoke = favJoke + '<li>' + joke.myJoke + '</li>';
 		});
 
 		$('#myJokes').append(favJoke);
 	}
 
 	successNewJoke();
+	displayMyJokes();
 
 });
 
