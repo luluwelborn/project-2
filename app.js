@@ -66,7 +66,7 @@ app.put('/favorites', function(req, res){
 // add favJoke to front
 app.get('/favorites', function favJokeList(req, res){
   console.log("hello backend to front!");
-  db.Joke._id({}, function(err, favJoke) {
+  db.Joke.findOne({_id: req.params.joke_id}, function(err, favJoke) {
   res.json(favJoke);
   });
 });

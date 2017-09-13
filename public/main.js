@@ -52,12 +52,18 @@ $(document).ready(function() {
 
 
 	// display all jokes on page
-	function displayMyJokes(favJoke) {
+	function displayMyJokes() {
 		$.ajax({
 	        method: 'GET',
-	        url: '/myJokes',
-	        success: function(favjoke) {
+	        url: '/favorites',
+	        success: function(favJoke) {
 	        	console.log("favJoke is : ", favJoke);
+	        	var favJoke = "";
+				favJoke.forEach(function(favJoke) {
+				favJoke = favJoke + '<li>' + joke.myJoke + '</li>';
+				});
+
+				$('#myJokes').append(favJoke);
 	        	// displayJokes(favJoke);
 	        },
 	        error: function(error) {
@@ -65,12 +71,7 @@ $(document).ready(function() {
 	        }
 	    })
 
-		var favJokes = "";
-		displayMyJokes.forEach(function(favJoke) {
-		favJoke = favJoke + '<li>' + joke.myJoke + '</li>';
-		});
-
-		$('#myJokes').append(favJoke);
+		
 	}
 
 	successNewJoke();
