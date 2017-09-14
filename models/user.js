@@ -9,7 +9,7 @@ var User = mongoose.Schema({
     email        : String,
     password     : String,
   },
-  favorites : [Joke.schema]
+  favorites : [String]
 });
 
 

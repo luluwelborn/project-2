@@ -54,11 +54,11 @@ app.get('/jokes', function homePage(req, res) {
 
 // add user favorite joke to back
 app.put('/favorites', function(req, res){
-    console.log('post joke route');
-    // console.log(req);
-    db.Joke.update({_id: req.user._id},
-      // updating db
-    {$push: {favorites: req.body}}, function (err, user){
+    console.log(req.body.item);
+    db.User.findOne({_id: req.body.user}, function(err, user) {
+      console.log(user);
+      user.favorites.push(req.body.item);
+      user.save();
       res.json(user);
     });
 });
@@ -67,6 +67,7 @@ app.put('/favorites', function(req, res){
 app.get('/favorites', function favJokeList(req, res){
   console.log("hello backend to front!");
   db.Joke.findOne({_id: req.params.joke_id}, function(err, favJoke) {
+    console.log();
   res.json(favJoke);
   });
 });
