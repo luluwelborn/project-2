@@ -23,6 +23,10 @@ h1 {
 	padding-top: 10px;
 }
 
+h5 {
+	font-family: 'Open Sans', sans-serif;
+}
+
 /* bootstrap's default class name for the nav */
 nav.navbar.navbar-default {
 	background-color: #fff;
@@ -52,7 +56,16 @@ form {
 }
 
 p {
-	font-size: 21px;
+	font-size: 30px;
+    letter-spacing: 1px;
+    line-height: 38px;
+    padding-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p.footer {
+	font-size: 14px;
+	padding-top: 60px;
 }
 
 /* bootstrap's default class name for the btn */
